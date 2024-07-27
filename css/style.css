@@ -1,0 +1,166 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #0BCEAF;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #ffffff;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Roboto", sans-serif;
+    --p1color: #FFFFFF;
+    --p2color: #CBB26B;
+    --p3color: #2A363B;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6c757d;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  /* Navbar Background and Button Styling */
+.navbar-background {
+    background: linear-gradient(to right, #2A363B, #CBB26B); /* Gradient background */
+    padding: 10px 20px;
+    color: #FFFFFF; /* White text color */
+}
+
+/* Navbar Toggler Button Styles */
+.navbar-toggler {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    transition: 0.5s ease-in-out;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    border-radius: 1rem;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #FFFFFF; /* White color for the toggler lines */
+    border-radius: 10px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+}
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+/* When navigation is clicked */
+.navbar-toggler .top-bar {
+    transform: rotate(135deg);
+    margin-top: 0px;
+}
+
+.navbar-toggler .btm-bar {
+    transform: rotate(-135deg);
+    margin-top: 0px;
+}
+
+.navbar-toggler .mid-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+/* State when the navbar is collapsed */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0deg);
+    margin-bottom: 20px;
+}
+
+.navbar-toggler.collapsed .btm-bar {
+    transform: rotate(0deg);
+    margin-top: 20px;
+}
+
+.navbar-toggler.collapsed .mid-bar {
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+
+.navbar-toggler-icon {
+    background-image: none; /* Hide the default icon */
+}
+
+/* Navbar Brand Centering */
+.navbar-brand {
+    flex: 0 auto;
+    text-align: center;
+}
+
+/* Navbar Items */
+.navbar-nav {
+    text-align: center;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    border-radius: 0.5rem;
+}
+
+.btn-p2color {
+    background-color: #CBB26B;
+    color: #FFFFFF;
+}
+
+.btn-p2color:hover {
+    background-color: #2A363B ;
+    color: #2A363B;
+}

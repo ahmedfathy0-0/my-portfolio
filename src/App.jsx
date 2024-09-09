@@ -2,10 +2,10 @@
 import React from 'react';
 import Intro from './components/Intro'
 
-const IntroSection = () => {
+const App = () => {
   return (
     <Intro />
   );
 };
 
-export default IntroSection;
+export default App;

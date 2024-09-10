@@ -61,10 +61,12 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: repeating-radial-gradient(circle, var(--primary-color) 0%, var(--secondary-color) 50%, var(--tertiary-color) 100%);
   z-index: -100;
-
 }
+
+
+
+
 p, a, li, button, ul {
   margin: 0;
   padding: 0;

@@ -2,9 +2,15 @@ import React from 'react';
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel'; 
+import SkillInfo from './Skill-Info';
+import SkillDesc from './Skills-Desc';
 
 
 const Skills = () => {
+    const [isReadMore, setIsReadMore] = React.useState(false);
+    const [IMG, setIMG] = React.useState('');
+    const [TITLE, setTITLE] = React.useState('');
+     
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -24,6 +30,26 @@ const Skills = () => {
           items: 1
         }
       };
+      const handleSkillClick = (title) => {
+        setTITLE(title);
+        switch (title) {
+            case 'Web Development':
+                setIMG('./assets/images/web-development.jpg');
+                break;
+            case 'Game Development':
+                setIMG('./assets/images/game-development.png');
+                break;
+            case 'App Development':
+                setIMG('./assets/images/app-development.png');
+                break;
+            case 'Logic & Circuit Design':
+                setIMG('./assets/images/logic&circuit-design.jpg');
+                break;
+            default:
+                setIMG('./assets/images/logic&circuit-design.jpg');
+        }
+        setIsReadMore(true);
+    };
 
     return (
         <section className="skills" id="skills">
@@ -31,35 +57,48 @@ const Skills = () => {
             <Row>
               <Col>
                 <div className="skills-bx">
-                  <h2>Skills</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
-                  <Carousel 
-                    responsive={responsive} 
-                    infinite={true} 
-                    autoPlay={true} 
-                    autoPlaySpeed={5000} 
-                    keyBoardControl={true} 
-                    customTransition="all .5" 
-                    transitionDuration={500} 
-                    className="skill-slider"
-                  >
-                    <div className="item">
-                      <img src={'./assets/images/web-development.jpg'} alt="Web Development" />
-                      <h5 className="skill-title">Web Development</h5>
-                    </div>
-                    <div className="item">
-                      <img src={'./assets/images/game-development.png'} alt="Game Development" />
-                      <h5 className="skill-title">Game Development</h5>
-                    </div>
-                    <div className="item">
-                      <img src={'./assets/images/app-development.png'} alt="App Development" />
-                      <h5 className="skill-title">App Development</h5>
-                    </div>
-                    <div className="item">
-                      <img src={'./assets/images/logic&circuit-design.jpg'} alt="Logic & Circuit Design" />
-                      <h5 className="skill-title">Logic & Circuit Design</h5>
-                    </div>
-                  </Carousel>
+                    {isReadMore ? (
+                        <SkillDesc 
+                        img={IMG} 
+                        title={TITLE}
+                        onReturn = {() => setIsReadMore(false)}
+                        />
+                    ) : (
+                        <>
+                        <h2>Skills</h2>
+                        <Carousel 
+                            responsive={responsive} 
+                            infinite={true} 
+                            autoPlay={true} 
+                            autoPlaySpeed={5000} 
+                            keyBoardControl={true} 
+                            customTransition="all .5" 
+                            transitionDuration={500} 
+                            className="skill-slider"
+                        >
+                            <SkillInfo
+                            img={'./assets/images/web-development.jpg'} 
+                            title={'Web Development'}
+                            onClick={handleSkillClick} 
+                            />
+                            <SkillInfo 
+                            img={'./assets/images/game-development.png'} 
+                            title={'Game Development'} 
+                            onClick={handleSkillClick} 
+                            />
+                            <SkillInfo 
+                            img={'./assets/images/app-development.png'} 
+                            title={'App Development'} 
+                            onClick={handleSkillClick} 
+                            />
+                            <SkillInfo 
+                            img={'./assets/images/logic&circuit-design.jpg'} 
+                            title={'Logic & Circuit Design'} 
+                            onClick={handleSkillClick} 
+                            />
+                        </Carousel>
+                        </>
+                    )}
                 </div>
               </Col>
             </Row>

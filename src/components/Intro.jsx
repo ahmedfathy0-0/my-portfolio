@@ -40,6 +40,7 @@ function Intro() {
               <a href="#"><i className="bi bi-github"></i></a>
               <a href="#"><i className="bi bi-instagram"></i></a>
               <a href="#"><i className="bi bi-whatsapp"></i></a>
+              <a href="#"><i className="bi bi-linkedin"></i></a>
             </div>
             <button className="navbar-btn" onClick={() => console.log("Hello")}>
               Let's connect <BsArrowRightCircle size={25} />

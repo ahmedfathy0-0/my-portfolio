@@ -126,12 +126,16 @@ nav.navbar {
   width: 100%;
   top: 0;
   z-index: 9999;
-  transition:  0.32s ease-in-out;
+  transition: background-color 0.5s ease, padding 0.5s ease;
+  backdrop-filter: blur(0px); 
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: var(---nav-bg-color);
+  background-color: rgba(18, 18, 18, 0.5); 
+  backdrop-filter: blur(8px); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
+
 nav.navbar a.navbar-brand {
     width: 9%;
 }
@@ -434,8 +438,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skills-bx {
-  background-color: #151515;
-  border-radius: 64px;
+  background-color: rgba(18, 18, 18, 0.5); 
+  backdrop-filter: blur(8px); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
@@ -457,22 +462,87 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 14px 0 75px 0;
 }
 .skill-slider {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 
 }
+
 .skill-slider .item img {
-  width: 50%;
+  width: 250px; 
+  height: 200px; 
+  object-fit: cover; 
   margin: 0 auto 15px auto;
+  display: block; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
+
 .skill-title {
-  font-size: 45px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 400;
   letter-spacing: 0.8px;
   color: var(--text-color);
   margin-bottom: 20px;
+  cursor: pointer;
 }
+
+.skill-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--nav-bg-color);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  position: relative; /* Add this to enable absolute positioning for children */
+}
+
+.skill-desc img {
+  border-radius: 8px;
+  width: 250px;
+  height: 200px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-desc h3 {
+  color: var(--intro-job-color);
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.skill-desc p {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.skill-desc:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.skill-desc .back-button {
+  cursor: pointer;
+  color: var(--intro-job-color);
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px; /* Adjust size as needed */
+}
+
+.skill-desc .back-button:hover {
+  color: var(--primary-color);
+}
+
 
 
 

@@ -4,6 +4,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel'; 
 import SkillInfo from './Skill-Info';
 import SkillDesc from './Skills-Desc';
+import Webimg from '../assets/images/web-development.jpg';
+import Gameimg from '../assets/images/game-development.png';
+import Appimg from '../assets/images/app-development.png';
+import Logicimg from '../assets/images/logic&circuit-design.jpg';
 
 
 const Skills = () => {
@@ -34,19 +38,19 @@ const Skills = () => {
         setTITLE(title);
         switch (title) {
             case 'Web Development':
-                setIMG('./assets/images/web-development.jpg');
+                setIMG(Webimg);
                 break;
             case 'Game Development':
-                setIMG('./assets/images/game-development.png');
+                setIMG(Gameimg);
                 break;
             case 'App Development':
-                setIMG('./assets/images/app-development.png');
+                setIMG(Appimg);
                 break;
             case 'Logic & Circuit Design':
-                setIMG('./assets/images/logic&circuit-design.jpg');
+                setIMG(Logicimg);
                 break;
             default:
-                setIMG('./assets/images/logic&circuit-design.jpg');
+                setIMG(Logicimg);
         }
         setIsReadMore(true);
     };
@@ -77,22 +81,22 @@ const Skills = () => {
                             className="skill-slider"
                         >
                             <SkillInfo
-                            img={'./assets/images/web-development.jpg'} 
+                            img={Webimg} 
                             title={'Web Development'}
                             onClick={handleSkillClick} 
                             />
                             <SkillInfo 
-                            img={'./assets/images/game-development.png'} 
+                            img={Gameimg} 
                             title={'Game Development'} 
                             onClick={handleSkillClick} 
                             />
                             <SkillInfo 
-                            img={'./assets/images/app-development.png'} 
+                            img={Appimg} 
                             title={'App Development'} 
                             onClick={handleSkillClick} 
                             />
                             <SkillInfo 
-                            img={'./assets/images/logic&circuit-design.jpg'} 
+                            img={Logicimg} 
                             title={'Logic & Circuit Design'} 
                             onClick={handleSkillClick} 
                             />

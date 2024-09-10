@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { BsArrowRightCircle } from "react-icons/bs";
 import Typed from "typed.js";
 import AnimatedBlob from "./AnimationBlob";
+import myphoto from "../assets/images/ahmed.png";
 
 function Intro() {
   // Create a reference to the element where Typed.js will insert the typing effect
@@ -52,7 +53,7 @@ function Intro() {
             <div className = "img-box ">
               <img
                 style={{ transform: 'scaleX(-1)' }}
-                src="./assets/images/ahmed.png"
+                src={myphoto}
                 alt="intro"
               />
             </div>

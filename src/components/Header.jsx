@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
+import logo from '../assets/images/logo.png';
 
 const NavbarComponent = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -25,7 +26,7 @@ const NavbarComponent = () => {
     <Navbar expand="lg" className={scroll ? 'navbar scrolled' : 'navbar'}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src="./assets/images/logo.png" alt="Logo" className="img-logo" />
+          <img src={logo} alt="Logo" className="img-logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

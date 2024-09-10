@@ -16,6 +16,8 @@
     "react-bootstrap": "^2.10.4",
     "react-dom": "^17.0.2",
     "react-icons": "^5.3.0",
+    "react-multi": "^0.0.5",
+    "react-multi-carousel": "^2.8.5",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {

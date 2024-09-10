@@ -15,6 +15,23 @@
   src: url('../assets/font/CentraNo2-Medium.ttf') ;
   font-weight: 500;
 }
+:root {
+  --primary-color: #0000ff; /* Blue */
+  --secondary-color: #000080; /* Dark blue */
+  --tertiary-color: #000000; /* Black */
+  --highlight-color: rgba(18, 247, 255, 0.6); /* Cyan glow */
+  --nav-bg-color: #121212; /* Navbar background */
+  --button-bg-color: #333; /* Button background */
+  --gradient-start: #0000ff; /* Gradient start */
+  --gradient-mid: #0000cc; /* Gradient middle */
+  --gradient-end: #000080; /* Gradient end */
+  --intro-sub-bg: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  --intro-sub-border: rgba(255, 255, 255, 0.5); /* Intro sub border */
+  --intro-job-color: #12f7ff; /* Job title color */
+  --text-color: #fff; /* White text */
+  --danger-color: red; /* Danger color */
+  --success-color: green; /* Success color */
+}
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: normal;
-  color: #fff;
+  color: var(--text-color);
 }
 #canvas {
   position: fixed;
@@ -44,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: repeating-radial-gradient(circle, #0000ff 0%, #000080 50%, #000000 100%);
+  background-image: repeating-radial-gradient(circle, var(--primary-color) 0%, var(--secondary-color) 50%, var(--tertiary-color) 100%);
   z-index: -100;
 
 }
@@ -53,11 +70,21 @@ p, a, li, button, ul {
   padding: 0;
   line-height: normal;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
 }
 
 a:hover {
   text-decoration: none;
+  text-shadow: 
+  0 0 10px var(--highlight-color),
+  0 0 20px var(--highlight-color),
+  0 0 30px var(--highlight-color),
+  0 0 40px var(--highlight-color),
+  0 0 70px var(--highlight-color),
+  0 0 80px var(--highlight-color),
+  0 0 100px var(--highlight-color),
+  0 0 150px var(--highlight-color);
+
 }
 
 img {
@@ -86,11 +113,11 @@ input:focus, textarea:focus, select:focus {
 }
 
 p.success {
-	color: green;
+	color: var(--success-color);
 }
 
 p.danger {
-	color: red;
+	color: var(--danger-color);
 }
 /************ Navbar Css ************/
 nav.navbar {
@@ -103,14 +130,14 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-color: var(---nav-bg-color);
 }
 nav.navbar a.navbar-brand {
     width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #fff !important;
+  color: var(--text-color) !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -119,6 +146,17 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
+    text-shadow: 
+  0 0 10px var(--highlight-color),
+  0 0 20px var(--highlight-color),
+  0 0 30px var(--highlight-color),
+  0 0 40px var(--highlight-color),
+  0 0 70px var(--highlight-color),
+  0 0 80px var(--highlight-color),
+  0 0 100px var(--highlight-color),
+  0 0 150px var(--highlight-color);
+    color: var(--intro-job-color) !important;
+
 }
 span.navbar-btn {
     display: flex;
@@ -132,10 +170,10 @@ span.navbar-btn {
   width: 3.5rem;
   height: 3.5rem;
   background: transparent;
-  border: .2rem solid #fff;
+  border: .2rem solid var(--text-color);
   border-radius: 50%;
   font-size: 2rem;
-  color: #fff;
+  color: var(--text-color);
   margin: 3rem 1.5rem 3rem 0;
   text-decoration: none; 
   transition: .5s ease;
@@ -143,9 +181,18 @@ span.navbar-btn {
 
 .social-media a:hover {
     background-color: transparent;
-    color: #0000ff; 
-    border: .2rem solid #0000ff;
-    box-shadow: 0 0 2rem #ffffff; 
+    color: var(--intro-job-color); 
+    border: .2rem solid var(--intro-job-color);
+    box-shadow: 
+      0 0 10px var(--highlight-color),
+      0 0 20px var(--highlight-color),
+      0 0 30px var(--highlight-color),
+      0 0 40px var(--highlight-color),
+      0 0 70px var(--highlight-color),
+      0 0 80px var(--highlight-color),
+      0 0 100px var(--highlight-color),
+      0 0 150px var(--highlight-color);
+
 }
 .social-icon a img {
 	width: 40%;
@@ -158,7 +205,7 @@ span.navbar-btn {
 .navbar-btn {
   position: relative; 
   padding: 15px 40px; 
-  color: #fff; 
+  color: var(--text-color); 
   background: transparent;
   border: none; 
   font-size: 1rem; 
@@ -177,7 +224,7 @@ span.navbar-btn {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #333; 
+  background-color: var(--button-bg-color); 
   left: 0;
   top: 0;
   z-index: -2; 
@@ -188,10 +235,11 @@ span.navbar-btn {
   content: "";
   position: absolute;
   background: linear-gradient(45deg, 
-    #0000ff,
-    #0000cc, 
-    #000080  
+    var(--gradient-start),
+    var(--gradient-mid), 
+    var(--gradient-end)  
   ); 
+
   left: -4px; 
   top: -4px; 
   background-size: 300%; /* Adjusted for smoother gradient transition */
@@ -215,6 +263,10 @@ span.navbar-btn {
 
 .navbar-btn:hover::before {
   opacity: 1; 
+  box-shadow: 0 0 10px var(--highlight-color),
+  0 0 20px var(--highlight-color),
+  0 0 30px var(--highlight-color),
+  0 0 40px var(--highlight-color);
 }
 
 .navbar-btn:active::after {
@@ -238,19 +290,19 @@ nav.navbar .navbar-toggler-icon {
   height: 17px;
   background-image: none;
   position: relative;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid var(--text-color);
   transition: all 300ms linear;
   top: -2px;
 }
 nav.navbar .navbar-toggler-icon:focus {
-	border-bottom: 2px solid #fff;
+	border-bottom: 2px solid var(--text-color);
 }
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
 	width: 24px;
 	position: absolute;
 	height: 2px;
-	background-color: #fff;
+	background-color: var(--text-color);
 	top: 0;
 	left: 0;
 	content: '';
@@ -262,12 +314,12 @@ nav.navbar .navbar-toggler-icon:after {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
 	transform: rotate(45deg);
-	background-color: #fff;
+	background-color: var(--text-color);
 	height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 	transform: translateY(8px) rotate(-45deg);
-	background-color: #fff;
+	background-color: var(--text-color);
 	height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
@@ -286,9 +338,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--text-color);
+  border: 1px solid var(--intro-sub-border);
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
@@ -302,14 +353,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .intro p {
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
 }
 .intro button {
-  color: #fff;
+  color: var(--text-color);
   font-weight: 700;
   font-size: 20px;
   margin-top: 60px;
@@ -347,15 +398,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 0.8px;
-  background: linear-gradient(45deg, #fc61fc, #ffffff);
-  -webkit-background-clip: text;
-  color: transparent;  
+  color: var(--intro-job-color);
   margin-top: 20px;
 }
 .intro-desc {
   font-size: 20px;
   font-weight: 400;
-  color: #fff;
+  color: var(--text-color);
   letter-spacing: 0.8px;
   margin-top: 20px;
 }
@@ -378,5 +427,53 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 2rem;
   animation: moveUpAndDown 3s infinite;
 }
+
+/************ Skills Css ************/
+.skills {
+  padding: 0 0 50px 0;
+  position: relative;
+}
+.skills-bx {
+  background-color: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+.skills h2 {
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  
+}
+.skills p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #888888;
+  letter-spacing: 0.8px;
+  line-height: 1.5rem;
+  margin: 14px 0 75px 0;
+}
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+
+}
+.skill-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+.skill-title {
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+
 
 

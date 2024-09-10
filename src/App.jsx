@@ -1,10 +1,13 @@
-// src/components/IntroSection.jsx
 import React from 'react';
-import Intro from './components/Intro'
+import Intro from './components/Intro';
+import Skills from './components/Skills';
 
 const App = () => {
   return (
-    <Intro />
+    <div>
+      <Intro />
+      <Skills />
+    </div>
   );
 };
 

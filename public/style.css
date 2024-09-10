@@ -420,10 +420,198 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
 }
 
+
+
+
+
+
+/************ About Css ************/
+section.about {
+  padding: 80px 0;
+  margin-top: 100px;
+}
+
+.about .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  background-color: rgba(18, 18, 18, 0.7); 
+  backdrop-filter: blur(3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  border-radius: 24px; 
+  justify-content: center;
+  padding: 40px 30px; 
+  margin-top: 0px; 
+}
+
+.about-title {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.about-desc1 {
+  font-size: 18px; 
+  line-height: 1.6; 
+  color: #e0e0e0; 
+  margin-bottom: 20px;
+  max-width: 800px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-desc2 {
+  font-size: 20px; 
+  font-weight: 400;
+  line-height: 1.6; 
+  color: var(--intro-job-color); 
+  margin-bottom: 20px;
+  max-width: 800px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-details {
+  margin-top: 20px;
+}
+
+.details-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px; 
+}
+
+.details-title {
+  font-weight: 600; 
+  color: #fff; 
+  font-size: 16px;
+}
+
+.details-info {
+  font-size: 16px; 
+  color: var(--intro-job-color); 
+}
+
+.img-about {
+  position: relative;
+}
+
+.img-about img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.info-about1 span,
+.info-about2 span {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--intro-job-color);
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  
+}
+.info-about1 p,
+.info-about2 p {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-color);
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.info-about1,
+.info-about2 {
+  background-color: rgba(18, 18, 18, 0.7);
+  font-size: 0.5rem;
+  position: absolute;
+  padding: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
+  display: block;
+  box-shadow: 1px solid var(--intro-job-color);
+  outline : 2px solid var(--intro-job-color);
+  z-index: 100;
+  animation: morph 6s linear infinite;
+ 
+}
+@keyframes morph {
+  0%,100% {
+    border-radius: 40% 60% 70% 30%/ 40% 40% 60% 50%;
+  }
+  30%{
+    border-radius: 70% 30% 50% 50%/ 30% 30% 70% 70%;
+  }
+  60%{
+    border-radius: 30% 70% 60% 40%/ 60% 60% 40% 40%;
+  }
+  80%{
+    border-radius: 60% 40% 30% 70%/ 70% 70% 30% 30%;
+  }
+
+  
+}
+.info-about1 {
+  top:10%;
+  left :25%;
+}
+.info-about2 {
+  bottom : 5%;
+  right :15%;
+}
+
+
+
+@media (max-width: 768px) {
+  .about .container {
+    padding: 0 15px;
+  }
+
+  .about-title {
+    font-size: 30px; 
+  }
+
+  .details-item {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .img-about img {
+    margin-bottom: 30px;
+  }
+
+  .info-about {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /************ Skills Css ************/
 .skills {
   padding: 0 0 50px 0;
   position: relative;
+  margin-top: 100px;
 }
 .skills-bx {
   background-color: rgba(18, 18, 18, 0.5); 
@@ -489,7 +677,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
   margin-left: 100px;
   margin-right: 100px;
-  position: relative; /* Add this to enable absolute positioning for children */
+  position: relative; 
 }
 
 .skill-desc img {
@@ -524,13 +712,126 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 24px; /* Adjust size as needed */
+  font-size: 24px; 
 }
 
 .skill-desc .back-button:hover {
   color: var(--primary-color);
 }
 
+@media (max-width: 1200px) {
+  .skills h2 {
+    font-size: 40px;
+  }
+
+  .skill-desc {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .skill-slider .item img {
+    width: 200px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 992px) {
+  .skills h2 {
+    font-size: 36px;
+  }
+
+  .skills p {
+    font-size: 16px;
+  }
+
+  .skill-desc {
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .skill-desc img {
+    width: 200px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+
+  .skill-desc h3 {
+    font-size: 22px;
+  }
+
+  .skill-desc p {
+    font-size: 14px;
+  }
+
+  .back-button {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills h2 {
+    font-size: 32px;
+  }
+
+  .skill-desc {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 15px;
+  }
+
+  .skill-desc img {
+    width: 180px;
+    height: 140px;
+  }
+
+  .skill-desc h3 {
+    font-size: 20px;
+  }
+
+  .skill-desc p {
+    font-size: 14px;
+  }
+
+  .back-button {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills h2 {
+    font-size: 28px;
+  }
+
+  .skills p {
+    font-size: 14px;
+    margin: 10px 0 40px 0;
+  }
+
+  .skill-desc {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  .skill-desc img {
+    width: 150px;
+    height: 120px;
+  }
+
+  .skill-desc h3 {
+    font-size: 18px;
+  }
+
+  .skill-desc p {
+    font-size: 12px;
+  }
+
+  .back-button {
+    font-size: 16px;
+  }
+}
 
 
 

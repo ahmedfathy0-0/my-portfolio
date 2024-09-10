@@ -39,6 +39,13 @@ const NavbarComponent = () => {
               Home
             </Nav.Link>
             <Nav.Link
+              href="#about"
+              className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => setActiveLink('about')}
+            >
+              About Me
+            </Nav.Link>
+            <Nav.Link
               href="#skills"
               className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => setActiveLink('skills')}

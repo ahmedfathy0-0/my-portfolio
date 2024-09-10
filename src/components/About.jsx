@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myphoto from "../assets/images/ahmed2.png";
+import myphotobg from "../assets/images/ahmed2bg.png";
 
 const About = () => {
     const [age, setAge] = React.useState(0);
@@ -24,6 +25,7 @@ const About = () => {
             <Col xs={12} md={6} xl={7}>
               <div className="img-about">
                 <img src={myphoto} alt="" />
+                <img className="photo-bg" src={myphotobg} alt="" />
                 <div className="info-about1"> 
                   <span>+{Experience}</span>
                   <p>Years of Experience</p>

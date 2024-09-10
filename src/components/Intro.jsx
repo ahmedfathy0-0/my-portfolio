@@ -6,19 +6,16 @@ import AnimatedBlob from "./AnimationBlob";
 import myphoto from "../assets/images/ahmed.png";
 
 function Intro() {
-  // Create a reference to the element where Typed.js will insert the typing effect
   const typedElement = useRef(null);
 
   useEffect(() => {
-    // Initialize Typed.js
     const typed = new Typed(typedElement.current, {
       strings: ["Web Developer", "Software Engineer", "Freelancer"],
       typeSpeed: 50,
       backSpeed: 50,
-      loop: true, // Enables looping
+      loop: true, 
     });
 
-    // Clean up the Typed.js instance when component unmounts
     return () => {
       typed.destroy();
     };

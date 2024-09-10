@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsArrowRightCircle } from "react-icons/bs";
 import Typed from "typed.js";
+import AnimatedBlob from "./AnimationBlob";
 
 function Intro() {
   // Create a reference to the element where Typed.js will insert the typing effect
@@ -47,11 +48,17 @@ function Intro() {
             </button>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <img
-              style={{ transform: 'scaleX(-1)' }}
-              src="./assets/images/ahmed.png"
-              alt="intro"
-            />
+           <div className="home-image">
+            <div className = "img-box ">
+              <img
+                style={{ transform: 'scaleX(-1)' }}
+                src="./assets/images/ahmed.png"
+                alt="intro"
+              />
+            </div>
+            <AnimatedBlob />
+            <AnimatedBlob />
+            </div>
           </Col>
         </Row>
       </Container>

@@ -24,7 +24,7 @@ const About = () => {
           <Row className="align-items-center">
             <Col xs={12} md={6} xl={7}>
               <div className="img-about">
-                <img src={myphoto} alt="" />
+                <img className="photo" src={myphoto} alt="" />
                 <img className="photo-bg" src={myphotobg} alt="" />
                 <div className="info-about1"> 
                   <span>+{Experience}</span>

@@ -48,6 +48,22 @@ const NavbarComponent = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScroll(true); 
+      } else {
+        setScroll(false); 
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
+
   return (
     <>
       <Navbar expand="lg" className={scroll ? 'navbar scrolled' : 'navbar'}>

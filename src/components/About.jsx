@@ -25,7 +25,7 @@ const About = () => {
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
+            <TrackVisibility once>
             {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__bounceIn" : "animate__animated animate__bounceOut"}>
               <div className="img-about">
@@ -45,9 +45,6 @@ const About = () => {
             </TrackVisibility>
             </Col>
             <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-            {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__bounceIn" : "animate__animated animate__bounceOut"}>
               <div className="about-content">
                 <h2 className="about-title">Let me introduce myself</h2>
                 <p className="about-desc">
@@ -82,9 +79,6 @@ const About = () => {
                   Feel free to connect with me on LinkedIn, and let's push the boundaries of what's possible in software engineering together.
                 </p>
               </div>
-              </div>
-            }
-            </TrackVisibility>
             </Col>
           </Row>
         </Container>

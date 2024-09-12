@@ -1317,7 +1317,7 @@ section.about {
 }
 
 .card-coming-soon img {
-  filter: blur(3px) grayscale(100%); 
+  filter: blur(3px) ; 
 }
 
 .card-coming-soon::before {

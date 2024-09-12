@@ -35,7 +35,7 @@ function Intro() {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-          <TrackVisibility> 
+          <TrackVisibility once> 
           {({ isVisible }) => 
 
           <div className={isVisible ? "animate__animated animate__fadeInLeft" : "animate__animated animate__fadeOutLeft"}>
@@ -63,7 +63,7 @@ function Intro() {
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-          <TrackVisibility>
+          <TrackVisibility once>
           {({ isVisible }) =>
           <div className={isVisible ? "animate__animated animate__fadeInRight" : "animate__animated animate__fadeOutRight"}>
             <div className="img-box">

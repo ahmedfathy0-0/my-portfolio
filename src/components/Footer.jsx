@@ -1,37 +1,34 @@
-// src/components/Footer.jsx
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-sm" style={{ backgroundColor: '#212121' }}>
-        <div className="container">
-          <div className="row py-4 text-center text-white">
-            <div className="col-lg-5 col-md-6 mb-4 mb-md-0">
-              Connect with me on social media
+      <Container>
+        <Row>
+          <Col md={6} className="contact-info">
+            <h5>Contact Information</h5>
+            <p><FaPhoneAlt /> +20 1552 851 443</p>
+            <p><FaEnvelope /> ahmedfathi20044002@gmail.com</p>
+          </Col>
+          <Col md={6} className="follow-me">
+            <h5>Follow Me</h5>
+            <div className="social-links">
+              <a href="https://web.facebook.com/ahmed.fathi.1973/" aria-label="Facebook"><i className="bi bi-facebook"></i></a>
+              <a href="https://github.com/ahmedfathy0-0" aria-label="GitHub"><i className="bi bi-github"></i></a>
+              <a href="https://www.instagram.com/ahmedfathy0_0/" aria-label="Instagram"><i className="bi bi-instagram"></i></a>
+              <a href="https://wa.me/+201552851443" aria-label="WhatsApp"><i className="bi bi-whatsapp"></i></a>
+              <a href="https://www.linkedin.com/in/ahmedfathy-x1/" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
             </div>
-            <div className="col-lg-7 col-md-6">
-              <a href="#"><i className="bx bxl-facebook"></i></a>
-              <a href="#"><i className="bx bxl-twitter"></i></a>
-              <a href="#"><i className="bx bxl-github"></i></a>
-              <a href="#"><i className="bx bxl-linkedin"></i></a>
-              <a href="#"><i className="bx bxl-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="footer-bottom pt-5 pb-5">
-        <div className="container">
-          <div className="row text-center text-white">
-            <div className="col-12">
-              <div className="footer-bottom__copyright">
-                 Copyright 2024 <a href="#">Ahmed Fathy</a>, All rights reserved.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="text-center mt-4">
+            <p>&copy; {new Date().getFullYear()} Ahmed Fathy. All rights reserved.</p>
+          </Col>
+        </Row>
+      </Container>
     </footer>
   );
 };

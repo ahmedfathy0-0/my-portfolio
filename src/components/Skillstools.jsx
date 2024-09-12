@@ -3,6 +3,10 @@ import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from 'react-bootstrap';
 import Motoko from '../assets/images/Motoko.png';
 import JetBrainsimg from '../assets/images/JetBrains.png';
+import Verilog from '../assets/images/Verilog.png';
+import Csharp from '../assets/images/Csharp.png';
+import 'animate.css';
+import TrackVisibility from "react-on-screen";
 
 
 const skillIcons = {
@@ -25,7 +29,9 @@ const skillIcons = {
     CSS: "https://skillicons.dev/icons?i=css",
     HTML: "https://skillicons.dev/icons?i=html",
     Ubuntu: "https://skillicons.dev/icons?i=ubuntu",
-    JetBrains: JetBrainsimg
+    JetBrains: JetBrainsimg,
+    Verilog: Verilog,
+    'C#': Csharp
   }
 const Skillstools = () => {
     return (
@@ -36,9 +42,15 @@ const Skillstools = () => {
             <Col md={6}>
               <h3>Languages</h3>
               <ul>
-                {['JavaScript', 'Python', 'C++', 'Motoko'].map(skill => (
+                {['JavaScript', 'Python', 'C++','C#', 'Motoko','Verilog'].map(skill => (
                   <li key={skill}>
+                    <TrackVisibility>
+                    {({ isVisible }) =>
+                      <div className={isVisible ? "animate__animated animate__rotateIn" : "animate__animated animate__rotateOut"}>
                     <img src={skillIcons[skill]} alt={skill} style={{ width: '50px', height: '50px', display: 'block', margin: '0 auto' }} />
+                    </div>
+                    }
+                    </TrackVisibility>
                     {skill}
                   </li>
                 ))}
@@ -49,7 +61,13 @@ const Skillstools = () => {
               <ul>
                 {['Reactjs', 'jQuery', 'Bootstrap', 'Nodejs', 'Expressjs'].map(skill => (
                   <li key={skill}>
+                    <TrackVisibility>
+                    {({ isVisible }) =>
+                      <div className={isVisible ? "animate__animated animate__rotateIn" : "animate__animated animate__rotateOut"}>
                     <img src={skillIcons[skill]} alt={skill} style={{ width: '50px', height: '50px', display: 'block', margin: '0 auto' }} />
+                    </div>
+                    }
+                    </TrackVisibility>
                     {skill}
                   </li>
                 ))}
@@ -62,7 +80,13 @@ const Skillstools = () => {
               <ul>
                 {['Postgres', 'MongoDB'].map(skill => (
                   <li key={skill}>
+                    <TrackVisibility>
+                    {({ isVisible }) =>
+                      <div className={isVisible ? "animate__animated animate__rotateIn" : "animate__animated animate__rotateOut"}>
                     <img src={skillIcons[skill]} alt={skill} style={{ width: '50px', height: '50px', display: 'block', margin: '0 auto' }} />
+                    </div>
+                    }
+                    </TrackVisibility>
                     {skill}
                   </li>
                 ))}
@@ -73,7 +97,13 @@ const Skillstools = () => {
               <ul>
                 {['Adobe Illustrator', 'Git', 'VSCode', 'Docker', 'Jenkins'].map(skill => (
                   <li key={skill}>
+                    <TrackVisibility>
+                    {({ isVisible }) =>
+                      <div className={isVisible ? "animate__animated animate__rotateIn" : "animate__animated animate__rotateOut"}>
                     <img src={skillIcons[skill]} alt={skill} style={{ width: '50px', height: '50px', display: 'block', margin: '0 auto' }} />
+                    </div>
+                    }
+                    </TrackVisibility>
                     {skill}
                   </li>
                 ))}
@@ -86,7 +116,13 @@ const Skillstools = () => {
               <ul>
                 {['CSS', 'HTML', 'Ubuntu', 'JetBrains'].map(skill => (
                   <li key={skill}>
+                    <TrackVisibility>
+                    {({ isVisible }) =>
+                      <div className={isVisible ? "animate__animated animate__rotateIn" : "animate__animated animate__rotateOut"}>
                     <img src={skillIcons[skill]} alt={skill} style={{ width: '50px', height: '50px', display: 'block', margin: '0 auto' }} />
+                    </div>
+                    }
+                    </TrackVisibility>
                     {skill}
                   </li>
                 ))}

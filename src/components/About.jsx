@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myphoto from "../assets/images/ahmed2.png";
 import myphotobg from "../assets/images/ahmed2bg.png";
+import 'animate.css';
+import TrackVisibility from "react-on-screen";
 
 const About = () => {
     const [age, setAge] = React.useState(0);
@@ -23,6 +25,9 @@ const About = () => {
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={6} xl={7}>
+            <TrackVisibility>
+            {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__bounceIn" : "animate__animated animate__bounceOut"}>
               <div className="img-about">
                 <img className="photo" src={myphoto} alt="" />
                 <img className="photo-bg" src={myphotobg} alt="" />
@@ -35,8 +40,14 @@ const About = () => {
                   <p>Projects Completed</p>
                 </div>
               </div>
+              </div>
+            }
+            </TrackVisibility>
             </Col>
             <Col xs={12} md={6} xl={5}>
+            <TrackVisibility>
+            {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__bounceIn" : "animate__animated animate__bounceOut"}>
               <div className="about-content">
                 <h2 className="about-title">Let me introduce myself</h2>
                 <p className="about-desc">
@@ -71,6 +82,9 @@ const About = () => {
                   Feel free to connect with me on LinkedIn, and let's push the boundaries of what's possible in software engineering together.
                 </p>
               </div>
+              </div>
+            }
+            </TrackVisibility>
             </Col>
           </Row>
         </Container>

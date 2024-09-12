@@ -1,9 +1,11 @@
 import React from 'react';
 import { BsArrowRightCircle } from "react-icons/bs";
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'; // Import icons
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'; 
 
 import Motoko from '../assets/images/Motoko.png';
 import JetBrainsimg from '../assets/images/JetBrains.png';
+import Verilog from '../assets/images/Verilog.png';
+import Csharp from '../assets/images/Csharp.png';
 
 const skillIcons = {
     JavaScript: "https://skillicons.dev/icons?i=javascript",
@@ -25,7 +27,9 @@ const skillIcons = {
     CSS: "https://skillicons.dev/icons?i=css",
     HTML: "https://skillicons.dev/icons?i=html",
     Ubuntu: "https://skillicons.dev/icons?i=ubuntu",
-    JetBrains: JetBrainsimg
+    JetBrains: JetBrainsimg,
+    Verilog: Verilog,
+    'C#': Csharp
   }
 
   const ProjectDesc = ({ project, onBack }) => {

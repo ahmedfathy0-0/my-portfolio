@@ -7,6 +7,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../public/style.css';
 import { init, resizeReset, mousemove, mouseout } from './main';  
 import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
 
 function Root() {
   const canvasRef = useRef(null);  
@@ -30,7 +31,7 @@ function Root() {
       <Header />
       <App />
       <canvas ref={canvasRef} id="canvas"></canvas> 
-      {/* <Footer /> */}
+      <Footer />
     </React.StrictMode>
   );
 }

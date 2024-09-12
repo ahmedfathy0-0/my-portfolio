@@ -8,13 +8,13 @@ const NavbarComponent = () => {
   const [scroll, setScroll] = useState(false);
 
   const sectionBackgrounds = {
-    home: 'repeating-radial-gradient(circle, #0044ff 0%, #002288 50%, #000033 100%)',
-    about: 'repeating-radial-gradient(circle, #0088b3 0%, #006666 50%, #003d4d 100%)', 
-    skills: 'repeating-radial-gradient(circle, #0033cc 0%, #001a66 50%, #000033 100%)',
-    projects: 'repeating-radial-gradient(circle, #6600cc 0%, #330066 50%, #000033 100%)'
-  };
+    home: 'radial-gradient(circle, #0044ff 0%, #002288 50%, #000033 100%)',
+    about: 'radial-gradient(circle, #0088b3 0%, #006666 50%, #003d4d 100%)', 
+    skills: 'radial-gradient(circle, #0033cc 0%, #001a66 50%, #000033 100%)',
+    projects: 'radial-gradient(circle, #6600cc 0%, #330066 50%, #000033 100%)',
+    contact: 'radial-gradient(circle, #0088b3 0%, #006666 50%, #004d66 100%)' };
   
-
+  
   const [bgStyle, setBgStyle] = useSpring(() => ({
     backgroundImage: sectionBackgrounds.home,
     config: { duration: 1000 } 
@@ -23,6 +23,13 @@ const NavbarComponent = () => {
   const updateCanvasBackground = (sectionId) => {
     const newBackground = sectionBackgrounds[sectionId] || sectionBackgrounds.home;
     setBgStyle({ backgroundImage: newBackground });
+  };
+
+  const scrollToSection = (sectionId) => {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   useEffect(() => {
@@ -99,7 +106,10 @@ const NavbarComponent = () => {
                 Projects
               </Nav.Link>
             </Nav>
-            <button className="navbar-btn">
+            <button 
+              className="navbar-btn" 
+              onClick={() => scrollToSection('#contact')} 
+            >
               <span>Let's Connect</span>
             </button>
           </Navbar.Collapse>

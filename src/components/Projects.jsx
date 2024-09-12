@@ -7,17 +7,17 @@ import AlNadaWeb from '../assets/images/Projects/Al-Nada-Web.jpg';
 import AlNadaManager1 from '../assets/images/Projects/Al-Nada-Manager-V1.jpg';
 
 const projectsData = [
-    { title: "dBank", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: true, types: ['React'],tools: ['Reactjs','Nodejs','Expressjs','MongoDB'] ,link:"",github:""},
-    { title: "Keeper App", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: true, types: ['JavaScript'],tools: ['Reactjs','Nodejs','Expressjs','MongoDB'],link:"",github:"" },
-    { title: "Blog-Web-App", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: true, types: ['HTML & CSS'],tools:  ['Reactjs','Nodejs','Expressjs','MongoDB'],link:"",github:"" },
-    { title: "Al-Nada-Manager-V2", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: true, types: ['React'],tools:  ['Reactjs','Nodejs','Expressjs','MongoDB'] ,link:"",github:""},
-    { title: "Guardians-of-the-Galaxy", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: false, types: ['JavaScript'],tools: ['Reactjs','Nodejs','Expressjs','MongoDB'],link:"",github:"" },
-    { title: "AES", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: false, types: ['C++'],tools:  ['Reactjs','Nodejs','Expressjs','MongoDB'],link:"",github:"" },
-    { title: "PT-Kids", description: "This is a project", image: PTKids, ComingSoon: false, types: ['HTML & CSS'],tools: ['Reactjs','Nodejs','Expressjs','MongoDB'],link:"",github:"" },
-    { title: "Calculator", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: false, types: ['JavaScript'],tools:  ['Reactjs','Nodejs','Expressjs','MongoDB'],link:"",github:"" },
-    { title: "Al-Nada-Web", description: "This is a project", image: AlNadaWeb, ComingSoon: false, types: ['React'],tools: ['Reactjs','Nodejs','Expressjs','MongoDB'],link:"http://alnadascientific.com/",github:"https://github.com/ahmedfathy0-0/Al-Nada-Web.git" },
-    { title: "Al-Nada-Manager-V1", description: "This is a project", image: AlNadaManager1, ComingSoon: false, types: ['Node & Express','VBA & .NET'],tools:  ['Reactjs','Nodejs','Expressjs','MongoDB'] ,link:"https://youtu.be/pSUseo3pLeg?si=trZrVqJMSoEhaJ8g",github:""},
-    { title: "Solar-Tracker", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: false, types: ['C++'],tools: ['Reactjs','Nodejs','Expressjs','MongoDB'] ,link:"",github:""}
+    { title: "dBank", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: true, types: ['React','JavaScript','HTML & CSS'],tools: ['Reactjs','JavaScript','Motoko'] ,link:"",github:"https://github.com/ahmedfathy0-0/dBank.git"},
+    { title: "Keeper App", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: true, types: ['React','JavaScript','HTML & CSS','Node & Express'],tools: ['Reactjs','Nodejs','Expressjs','Postgres'],link:"",github:"https://github.com/ahmedfathy0-0/keeper-app.git" },
+    { title: "Blog-Web-App", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: true, types: ['HTML & CSS','Node & Express'],tools:  ['Nodejs','Expressjs','Postgres'],link:"",github:"https://github.com/ahmedfathy0-0/Blog-web-application.git" },
+    { title: "Al-Nada-Manager-V2", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: true, types: ['VBA & .NET'],tools:  ['Postgres','C#'] ,link:"",github:"https://github.com/ahmedfathy0-0/Al-Nada-Manager-App.git"},
+    { title: "Guardians-of-the-Galaxy", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: false, types: ['C++'],tools: ['C++'],link:"",github:"https://github.com/ahmedfathy0-0/DS-Guardians-of-the-Galaxy.git" },
+    { title: "AES", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: false, types: ['Others'],tools:  ['Verilog'],link:"",github:"https://github.com/ahmedfathy090/AES.git" },
+    { title: "PT-Kids", description: "This is a project", image: PTKids, ComingSoon: false, types: ['C++'],tools: ['C++'],link:"",github:"https://github.com/ahmedfathy0-0/PT-Project.git" },
+    { title: "Calculator", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: false, types: ['Others'],tools:  ['Reactjs','Nodejs','Expressjs','MongoDB'],link:"",github:"" },
+    { title: "Al-Nada-Web", description: "This is a project", image: AlNadaWeb, ComingSoon: false, types: ['JavaScript','HTML & CSS'],tools: ['JavaScript','HTML', 'CSS'],link:"http://alnadascientific.com/",github:"https://github.com/ahmedfathy0-0/Al-Nada-Web.git" },
+    { title: "Al-Nada-Manager-V1", description: "This is a project", image: AlNadaManager1, ComingSoon: false, types: ['VBA & .NET'],tools:  [] ,link:"https://youtu.be/pSUseo3pLeg?si=trZrVqJMSoEhaJ8g",github:""},
+    { title: "Solar-Tracker", description: "This is a project", image: "https://via.placeholder.com/150", ComingSoon: false, types: ['Others'],tools: [] ,link:"",github:""}
   ];
   
   
@@ -41,7 +41,7 @@ const projectsData = [
           <Row className="align-items-start">
             <Col xs={12} md={2} xl={2}>
               <div className="left-content">
-                {['All Projects', 'HTML & CSS', 'JavaScript', 'React', 'Node & Express', 'VBA & .NET', 'C++'].map(category => (
+                {['All Projects', 'HTML & CSS', 'JavaScript', 'React', 'Node & Express', 'VBA & .NET', 'C++','Others'].map(category => (
                   <button
                     key={category}
                     className={active === category ? 'btn-active btn' : 'btn'}

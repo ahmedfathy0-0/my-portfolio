@@ -6,7 +6,7 @@ Welcome to my personal portfolio website! 🎉 This is a showcase of my skills, 
 
 You can visit my portfolio by clicking the link below:
 
-[Ahmed Fathy's Portfolio](https://my-portfolio-swart-kappa.vercel.app/)
+[Ahmed Fathy's Portfolio](https://ahmed-portfolio-swart-kappa.vercel.app/)
 
 ## ✨ Features
 

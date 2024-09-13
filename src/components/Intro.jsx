@@ -38,7 +38,7 @@ function Intro() {
           <TrackVisibility once> 
           {({ isVisible }) => 
 
-          <div className={isVisible ? "animate__animated animate__fadeInLeft" : "animate__animated animate__fadeOutLeft"}>
+          <div className={isVisible ? "animate__animated animate__fadeInLeft" : ""}>
             <span className="intro-sub">Hello, I am</span>
             <h1 ><span className="wrap">Ahmed Fathy</span></h1>
             <h2 className="intro-job">and I'm a{" "}
@@ -65,7 +65,7 @@ function Intro() {
           <Col xs={12} md={6} xl={5}>
           <TrackVisibility once>
           {({ isVisible }) =>
-          <div className={isVisible ? "animate__animated animate__fadeInRight" : "animate__animated animate__fadeOutRight"}>
+          <div className={isVisible ? "animate__animated animate__fadeInRight" : ""}>
             <div className="img-box">
               <img src={myphoto} alt="intro" />
             </div>

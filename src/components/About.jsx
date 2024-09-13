@@ -27,7 +27,7 @@ const About = () => {
             <Col xs={12} md={6} xl={7}>
             <TrackVisibility once>
             {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__bounceIn" : "animate__animated animate__bounceOut"}>
+              <div className={isVisible ? "animate__animated animate__bounceIn" : ""}>
               <div className="img-about">
                 <img className="photo" src={myphoto} alt="" />
                 <img className="photo-bg" src={myphotobg} alt="" />

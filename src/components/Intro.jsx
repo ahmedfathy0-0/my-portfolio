@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react"; // This is enough
 import { Container, Row, Col } from "react-bootstrap";
 import { BsArrowRightCircle } from "react-icons/bs";
 import Typed from "typed.js";
@@ -10,6 +10,8 @@ import TrackVisibility from "react-on-screen";
 
 function Intro() {
   const typedElement = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const introRef = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
@@ -29,16 +31,30 @@ function Intro() {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); 
+        }
+      },
+      { threshold: 0.5 } 
+    );
+
+    if (introRef.current) {
+      observer.observe(introRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="intro" id="home">
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
-          <TrackVisibility once> 
-          {({ isVisible }) => 
-
-          <div className={isVisible ? "animate__animated animate__fadeInLeft" : ""}>
+          <div ref={introRef} className={isVisible ? "animate__animated animate__fadeInLeft" : "animate__animated animate__fadeOutLeft"}>
             <span className="intro-sub">Hello, I am</span>
             <h1 ><span className="wrap">Ahmed Fathy</span></h1>
             <h2 className="intro-job">and I'm a{" "}
@@ -59,20 +75,16 @@ function Intro() {
               >
               Let's connect <BsArrowRightCircle size={25} />
             </button>
-          </div>}
-            </TrackVisibility>
+          </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
-          <TrackVisibility once>
-          {({ isVisible }) =>
-          <div className={isVisible ? "animate__animated animate__fadeInRight" : ""}>
+          <div ref={introRef} className={isVisible ? "animate__animated animate__fadeInRight" : "animate__animated animate__fadeOutRight"}>
             <div className="img-box">
               <img src={myphoto} alt="intro" />
             </div>
             <AnimatedBlob />
             <AnimatedBlob />
-            </div>}
-            </TrackVisibility>
+            </div>
           </Col>
         </Row>
       </Container>

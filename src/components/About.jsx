@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react"; // This is enough
 import { Container, Row, Col } from "react-bootstrap";
 import myphoto from "../assets/images/ahmed2.png";
 import myphotobg from "../assets/images/ahmed2bg.png";
 import 'animate.css';
-import TrackVisibility from "react-on-screen";
+
 
 const About = () => {
     const [age, setAge] = React.useState(0);
     const [Experience, setExperience] = React.useState(0);
+    const [isVisible, setIsVisible] = useState(false);
+    const introRef = useRef(null);
+
     useEffect(() => {
         const birthDate = new Date("2004-4-19");
         const today = new Date();
@@ -19,15 +22,30 @@ const About = () => {
         const experienceDate = new Date(diff2);
         setExperience(Math.abs(experienceDate.getUTCFullYear() - 1970));
     }, []);
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect(); 
+          }
+        },
+        { threshold: 0.5 } 
+      );
+  
+      if (introRef.current) {
+        observer.observe(introRef.current);
+      }
+  
+      return () => observer.disconnect();
+    }, []);
 
     return (
         <section className="about" id="about">
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={6} xl={7}>
-            <TrackVisibility once>
-            {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__bounceIn" : ""}>
+              <div ref={introRef} className={isVisible ? "animate__animated animate__bounceIn" : "animate__animated animate__bounceOut"}>
               <div className="img-about">
                 <img className="photo" src={myphoto} alt="" />
                 <img className="photo-bg" src={myphotobg} alt="" />
@@ -41,8 +59,6 @@ const About = () => {
                 </div>
               </div>
               </div>
-            }
-            </TrackVisibility>
             </Col>
             <Col xs={12} md={6} xl={5}>
               <div className="about-content">

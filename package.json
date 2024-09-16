@@ -2,7 +2,7 @@
   "name": "my--portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ahmedfathy0-0.github.io/my-portfolio",
+  "homepage": "http://ahmed-fathy.me/my-portfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",

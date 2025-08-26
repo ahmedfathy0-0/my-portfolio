@@ -1293,8 +1293,7 @@ section.about {
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   max-height: 650px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: scroll;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1721,8 +1720,8 @@ section.about {
 
 @media (max-width: 480px) {
   .card-container {
-    flex-direction: column;
-    align-items: center;
+    padding: 10px;
+    justify-content: center;
   }
 
   .card-container .card {

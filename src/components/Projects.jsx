@@ -16,6 +16,16 @@ import AlNadaManager2 from "../assets/images/Projects/Al-Nada-Manager-V2.jpeg";
 
 const projectsData = [
   {
+    title: "Al-Nada-Manager-V2",
+    image: AlNadaManager2,
+    ComingSoon: false,
+    types: ["VBA & .NET"],
+    tools: ["React", "Redux", "Nodejs", "Expressjs"],
+    link: "",
+    github:
+      "https://github.com/Al-Nada-Company-Manager-App/Al-Nada-Office-Manager.git",
+  },
+  {
     title: "Keeper App",
     image: Keeper,
     ComingSoon: false,
@@ -32,16 +42,6 @@ const projectsData = [
     tools: ["Nodejs", "Expressjs", "Postgres"],
     link: "",
     github: "https://github.com/ahmedfathy0-0/Blog-web-application.git",
-  },
-  {
-    title: "Al-Nada-Manager-V2",
-    image: AlNadaManager2,
-    ComingSoon: false,
-    types: ["VBA & .NET"],
-    tools: ["React", "Redux", "Nodejs", "Expressjs"],
-    link: "",
-    github:
-      "https://github.com/Al-Nada-Company-Manager-App/Al-Nada-Office-Manager.git",
   },
   {
     title: "Guardians-of-the-Galaxy",

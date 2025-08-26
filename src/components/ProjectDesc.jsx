@@ -17,6 +17,15 @@ import JetBrainsimg from "../assets/images/JetBrains.png";
 import ReactQuery from "../assets/images/ReactQuery.svg";
 import rehypeSanitize from "rehype-sanitize";
 
+function resolveImageUrl(src, repoPath, branch = "main") {
+  if (!src) return "";
+  if (/^https?:\/\//.test(src)) return src;
+  return `https://raw.githubusercontent.com/${repoPath}/${branch}/${src.replace(
+    /^\.\//,
+    ""
+  )}`;
+}
+
 const skillIcons = {
   JavaScript: "https://skillicons.dev/icons?i=javascript",
   Python: "https://skillicons.dev/icons?i=python",
@@ -79,6 +88,7 @@ const ProjectDesc = ({ project, onBack }) => {
   const [expanded, setExpanded] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [repoPath, setRepoPath] = useState("");
 
   useEffect(() => {
     if (project.github) {
@@ -86,9 +96,9 @@ const ProjectDesc = ({ project, onBack }) => {
       setError(null);
 
       const repoPath = project.github
-        .replace("https://github.com/", "")
-        .replace(".git", "");
-
+      .replace("https://github.com/", "")
+      .replace(".git", "");
+      setRepoPath(repoPath);
       // Fetch README
       const fetchReadme = fetch(
         `https://raw.githubusercontent.com/${repoPath}/main/README.md`
@@ -124,8 +134,11 @@ const ProjectDesc = ({ project, onBack }) => {
           setError("Failed to load project details.");
         })
         .finally(() => setLoading(false));
+
+
     }
   }, [project]);
+
 
   // Remove duplicates and normalize language/tool names
   const normalizeSkillName = (name) => {
@@ -282,18 +295,31 @@ const ProjectDesc = ({ project, onBack }) => {
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw, rehypeSanitize]}
                 components={{
-                  img: ({ node, ...props }) => (
-                    <img
-                      {...props}
-                      loading="lazy"
-                      style={{
-                        maxWidth: "100%",
-                        height: "auto",
-                        display: "block",
-                        margin: "15px auto",
-                      }}
-                    />
-                  ),
+                  img: ({ node, ...props }) => {
+                    const fixedSrc = resolveImageUrl(
+                      props.src,
+                      repoPath,
+                      "main"
+                    );
+
+                    // Extract width/height if passed inline in README <img>
+                    const width = props.width ? props.width : "auto";
+                    const height = props.height ? props.height : "auto";
+
+                    return (
+                      <img
+                        {...props}
+                        src={fixedSrc}
+                        loading="lazy"
+                        style={{
+                          maxWidth: width === "auto" ? "100%" : width + "px",
+                          height: height === "auto" ? "auto" : height + "px",
+                          display: "block",
+                          margin: "15px auto",
+                        }}
+                      />
+                    );
+                  },
                   table: ({ node, ...props }) => (
                     <div className="md-table-wrapper">
                       <table {...props} />

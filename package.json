@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-spring/web": "^9.7.4",
@@ -19,13 +19,17 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "emailjs-com": "^3.2.0",
-    "react": "^17.0.2",
+    "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
+    "react-markdown": "^10.1.0",
     "react-multi": "^0.0.5",
     "react-multi-carousel": "^2.8.5",
     "react-on-screen": "^2.1.1",
+    "rehype-raw": "^7.0.0",
+    "rehype-sanitize": "^6.0.0",
+    "remark-gfm": "^4.0.1",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {

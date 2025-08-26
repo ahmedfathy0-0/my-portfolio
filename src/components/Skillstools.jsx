@@ -98,8 +98,6 @@ const Skillstools = () => {
                           src={skillIcons[skill]}
                           alt={skill}
                           style={{
-                            width: "50px",
-                            height: "50px",
                             display: "block",
                             margin: "0 auto",
                           }}
@@ -142,8 +140,6 @@ const Skillstools = () => {
                           src={skillIcons[skill]}
                           alt={skill}
                           style={{
-                            width: "50px",
-                            height: "50px",
                             display: "block",
                             margin: "0 auto",
                           }}
@@ -176,8 +172,6 @@ const Skillstools = () => {
                           src={skillIcons[skill]}
                           alt={skill}
                           style={{
-                            width: "50px",
-                            height: "50px",
                             display: "block",
                             margin: "0 auto",
                           }}
@@ -216,8 +210,6 @@ const Skillstools = () => {
                           src={skillIcons[skill]}
                           alt={skill}
                           style={{
-                            width: "50px",
-                            height: "50px",
                             display: "block",
                             margin: "0 auto",
                           }}
@@ -250,8 +242,6 @@ const Skillstools = () => {
                           src={skillIcons[skill]}
                           alt={skill}
                           style={{
-                            width: "50px",
-                            height: "50px",
                             display: "block",
                             margin: "0 auto",
                           }}

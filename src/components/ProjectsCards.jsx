@@ -7,7 +7,7 @@ const ProjectsCards = (props) => {
   return (
     <TrackVisibility once>
      {({ isVisible }) =>
-        <div className={isVisible ? "animate__animated animate__fadeInUp" : "animate__animated animate__fadeOutDown"}>
+        <div>
     <Card 
         className={props.ComingSoon ? "card-coming-soon" : "card"}
       >

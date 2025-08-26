@@ -99,9 +99,9 @@ function Intro() {
             <div
               ref={introRef}
               className={
-                isVisible
+                (isVisible
                   ? "animate__animated animate__fadeInRight"
-                  : "animate__animated animate__fadeOutRight"
+                  : "animate__animated animate__fadeOutRight") + " intro-right"
               }
             >
               <div className="img-box">

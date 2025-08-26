@@ -1002,6 +1002,7 @@ section.about {
   margin-bottom: 20px;
   cursor: pointer;
 }
+
 .additional-skills {
   margin-top: 40px;
   text-align: center;
@@ -1052,8 +1053,8 @@ section.about {
   }
 
   .additional-skills ul li img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -1064,8 +1065,8 @@ section.about {
   }
 
   .additional-skills ul li img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 
   .additional-skills h3 {
@@ -1080,13 +1081,31 @@ section.about {
   }
 
   .additional-skills ul li img {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
 
   .additional-skills h3 {
     font-size: 20px;
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .additional-skills h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .additional-skills ul li {
+    font-size: 8px;
+    margin: 0 3px;
+  }
+
+  .additional-skills ul li img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 6px;
   }
 }
 
@@ -1275,6 +1294,7 @@ section.about {
   border: 1px solid rgba(255, 255, 255, 0.1);
   max-height: 650px;
   overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -2551,5 +2571,10 @@ section.about {
 
   .back-button {
     font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .intro-right {
+    display: none !important;
   }
 }

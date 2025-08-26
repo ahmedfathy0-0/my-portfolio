@@ -56,11 +56,6 @@ function Intro() {
           <Col xs={12} md={6} xl={7}>
             <div
               ref={introRef}
-              className={
-                isVisible
-                  ? "animate__animated animate__fadeInLeft"
-                  : "animate__animated animate__fadeOutLeft"
-              }
             >
               <span className="intro-sub">Hello, I am</span>
               <h1>

@@ -60,4 +60,7 @@ export const skillIcons = {
   EJS: "https://img.icons8.com/?size=100&id=puL87ypQPxxr&format=png&color=000000",
   Redux: "https://skillicons.dev/icons?i=redux",
   ReactQuery: ReactQuery,
+  MDX: "https://img.icons8.com/?size=100&id=21831&format=png&color=000000",
+  Assembly:
+    "https://img.icons8.com/?size=100&id=gVK745a4Vaur&format=png&color=000000",
 };

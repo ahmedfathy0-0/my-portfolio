@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import myphoto from "../assets/images/ahmed2.png";
 import myphotobg from "../assets/images/ahmed2bg.png";
 import 'animate.css';
+import projectsData from "./myprojects";
 
 
 const About = () => {
@@ -41,30 +42,40 @@ const About = () => {
     }, []);
 
     return (
-        <section className="about" id="about">
+      <section className="about" id="about">
         <Container>
           <Row className="align-items-center">
             <Col xs={12} md={6} xl={7}>
-              <div ref={introRef} className={isVisible ? "animate__animated animate__bounceIn" : "animate__animated animate__bounceOut"}>
-              <div className="img-about">
-                <img className="photo" src={myphoto} alt="" />
-                <img className="photo-bg" src={myphotobg} alt="" />
-                <div className="info-about1"> 
-                  <span>+{Experience}</span>
-                  <p>Years of Experience</p>
+              <div
+                ref={introRef}
+                className={
+                  isVisible
+                    ? "animate__animated animate__bounceIn"
+                    : "animate__animated animate__bounceOut"
+                }
+              >
+                <div className="img-about">
+                  <img className="photo" src={myphoto} alt="" />
+                  <img className="photo-bg" src={myphotobg} alt="" />
+                  <div className="info-about1">
+                    <span>+{Experience}</span>
+                    <p>Years of Experience</p>
+                  </div>
+                  <div className="info-about2">
+                    <span>+{projectsData.length}</span>
+                    <p>Projects Completed</p>
+                  </div>
                 </div>
-                <div className="info-about2"> 
-                  <span>+15</span>
-                  <p>Projects Completed</p>
-                </div>
-              </div>
               </div>
             </Col>
             <Col xs={12} md={6} xl={5}>
               <div className="about-content">
                 <h2 className="about-title">Let me introduce myself</h2>
                 <p className="about-desc">
-                  I'm Ahmed Fathy, a passionate full-stack developer and software engineering student at Cairo University. I specialize in creating modern, responsive web solutions and love taking on new challenges in the software development world.
+                  I'm Ahmed Fathy, a passionate full-stack developer and
+                  software engineering student at Cairo University. I specialize
+                  in creating modern, responsive web solutions and love taking
+                  on new challenges in the software development world.
                 </p>
                 <div className="about-details">
                   <div className="details-item">
@@ -89,10 +100,17 @@ const About = () => {
                   </div>
                 </div>
                 <div className="about-desc1">
-                  I'm currently working on improving my skills in software development, with a focus on advanced algorithms and data structures. I aim to contribute to open-source projects in 2024 and enhance my expertise in cloud technologies. Let's collaborate on interesting software projects or discuss best coding practices and software architecture!
+                  I'm currently working on improving my skills in software
+                  development, with a focus on advanced algorithms and data
+                  structures. I aim to contribute to open-source projects in
+                  2024 and enhance my expertise in cloud technologies. Let's
+                  collaborate on interesting software projects or discuss best
+                  coding practices and software architecture!
                 </div>
                 <p className="about-desc2">
-                  Feel free to connect with me on LinkedIn, and let's push the boundaries of what's possible in software engineering together.
+                  Feel free to connect with me on LinkedIn, and let's push the
+                  boundaries of what's possible in software engineering
+                  together.
                 </p>
               </div>
             </Col>

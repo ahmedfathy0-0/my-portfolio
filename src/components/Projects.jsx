@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectsCards from "./ProjectsCards";
 import ProjectDesc from "./ProjectDesc";
 
-import {projectsData} from "./myprojects";
+import projectsData from "./myprojects";
 
 const Projects = () => {
   const [active, setActive] = useState("All Projects");
@@ -26,8 +26,10 @@ const Projects = () => {
               {[
                 "All Projects",
                 "React",
-                "HTML & CSS",
+                "Nextjs",
+                "TypeScript",
                 "JavaScript",
+                "Threejs",
                 "Node & Express",
                 "VBA & .NET",
                 "C++",

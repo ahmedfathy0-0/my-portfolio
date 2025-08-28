@@ -4,18 +4,66 @@ import AlNadaManager1 from "../assets/images/Projects/Al-Nada-Manager-V1.jpg";
 import AES from "../assets/images/Projects/AES.jpg";
 import BlogWeb from "../assets/images/Projects/BlogWeb.jpeg";
 import Keeper from "../assets/images/Projects/Keeper.jpeg";
-import dBank from "../assets/images/Projects/dBank.png";
 import SolarTracker from "../assets/images/Projects/Solar-Tracker.jpeg";
 import Guardians from "../assets/images/Projects/Guardians-of-the-Galaxy.jpeg";
 import Calculator from "../assets/images/Projects/Calculator.jpg";
 import AlNadaManager2 from "../assets/images/Projects/Al-Nada-Manager-V2.jpeg";
-
-export const projectsData = [
+import TayseerWebsite from "../assets/images/Projects/Tayseer.png";
+import StarCode from "../assets/images/Projects/StarCode.png";
+import Brick from "../assets/images/Projects/Brick.png";
+import CompanyManager from "../assets/images/Projects/Company-Manager.png";
+import Rihaan from "../assets/images/Projects/Rihaan.png";
+const projectsData = [
+  {
+    title: "Rihaan-App",
+    image: Rihaan,
+    ComingSoon: true,
+    types: ["TypeScript", "Nextjs", "TailwindCSS", "Node & Express"],
+    tools: ["Nextjs", "TypeScript", "TailwindCSS", "Nodejs", "Expressjs", "MongoDB"],
+    link: "",
+    github: "",
+  },
+  {
+    title: "Company-Manager",
+    image: CompanyManager,
+    ComingSoon: true,
+    types: ["React", "JavaScript", "HTML & CSS", "Node & Express"],
+    tools: [
+      "React",
+      "TypeScript",
+      "ReactQuery",
+      "TailwindCSS",
+      "Nodejs",
+      "Expressjs",
+      "PLpgSQL",
+      "Prisma",
+    ],
+    link: "",
+    github: "",
+  },
+  {
+    title: "Tayseer-Website",
+    image: TayseerWebsite,
+    ComingSoon: false,
+    types: ["TypeScript", "Nextjs", "TailwindCSS"],
+    tools: ["Nextjs", "TypeScript", "TailwindCSS"],
+    link: "https://tayseer-web.vercel.app/",
+    github: "https://github.com/ahmedfathy0-0/Tayseer-web.git",
+  },
+  {
+    title: "Pharoh-s-StarCode",
+    image: StarCode,
+    ComingSoon: false,
+    types: ["JavaScript", "React", "HTML & CSS", "Threejs", "Node & Express"],
+    tools: ["Reactjs", "Nodejs", "Expressjs", "MongoDB"],
+    link: "https://pharoh-s-star-code.vercel.app/",
+    github: "https://github.com/ahmedfathy0-0/Pharoh-s-StarCode.git",
+  },
   {
     title: "Al-Nada-Manager-V2",
     image: AlNadaManager2,
     ComingSoon: false,
-    types: ["VBA & .NET"],
+    types: ["React", "JavaScript", "HTML & CSS", "Node & Express"],
     tools: ["React", "Redux", "Nodejs", "Expressjs"],
     link: "",
     github:
@@ -34,7 +82,7 @@ export const projectsData = [
     title: "Blog-Web-App",
     image: BlogWeb,
     ComingSoon: false,
-    types: ["HTML & CSS", "Node & Express"],
+    types: ["HTML & CSS", "Node & Express", "JavaScript"],
     tools: ["Nodejs", "Expressjs", "Postgres"],
     link: "",
     github: "https://github.com/ahmedfathy0-0/Blog-web-application.git",
@@ -71,7 +119,7 @@ export const projectsData = [
     image: Calculator,
     ComingSoon: false,
     types: ["Others"],
-    tools: ["Reactjs", "Nodejs", "Expressjs", "MongoDB"],
+    tools: [],
     link: "",
     github: "",
   },
@@ -94,6 +142,16 @@ export const projectsData = [
     github: "",
   },
   {
+    title: "Brick Breaker Game",
+    image: Brick,
+    ComingSoon: false,
+    types: ["Others"],
+    tools: ["Assembly"],
+    link: "",
+    github:
+      "https://github.com/ahmedfathy0-0/Brick-Breakers-Game-Assembly-8086.git",
+  },
+  {
     title: "Solar-Tracker",
     image: SolarTracker,
     ComingSoon: false,
@@ -103,3 +161,6 @@ export const projectsData = [
     github: "",
   },
 ];
+
+
+export default projectsData;

@@ -27,6 +27,7 @@ const Projects = () => {
                 "All Projects",
                 "React",
                 "Nextjs",
+                "Laravel",
                 "TypeScript",
                 "JavaScript",
                 "Threejs",

@@ -13,13 +13,21 @@ import StarCode from "../assets/images/Projects/StarCode.png";
 import Brick from "../assets/images/Projects/Brick.png";
 import CompanyManager from "../assets/images/Projects/Company-Manager.png";
 import Rihaan from "../assets/images/Projects/Rihaan.png";
+import NexaMart from "../assets/images/Projects/Nexamart.png";
 const projectsData = [
   {
     title: "Rihaan-App",
     image: Rihaan,
     ComingSoon: true,
     types: ["TypeScript", "Nextjs", "TailwindCSS", "Node & Express"],
-    tools: ["Nextjs", "TypeScript", "TailwindCSS", "Nodejs", "Expressjs", "MongoDB"],
+    tools: [
+      "Nextjs",
+      "TypeScript",
+      "TailwindCSS",
+      "Nodejs",
+      "Expressjs",
+      "MongoDB",
+    ],
     link: "",
     github: "",
   },
@@ -40,6 +48,21 @@ const projectsData = [
     ],
     link: "",
     github: "",
+  },
+  {
+    title: "NexaMart E-Commerce",
+    image: NexaMart,
+    ComingSoon: false,
+    types: ["React", "JavaScript", "HTML & CSS", "Laravel", "MySQL"],
+    tools: [
+      "React",
+      "TypeScript",
+      "Redux",
+      "TailwindCSS",
+      "Laravel",
+      "MySQL",
+    ],
+    github: "https://github.com/ahmedfathy0-0/NexaMart.git",
   },
   {
     title: "Tayseer-Website",
